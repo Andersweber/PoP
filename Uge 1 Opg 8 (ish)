@@ -1,0 +1,10 @@
+#r "nuget:DIKU.Canvas, 2.0"
+open Canvas
+open Color
+
+let box1 = rectangle red 10.0 600.0 400.0
+let box2 = rectangle green 790.0 595.0 10.0
+let tree = alignH (alignV box1 Right box2) Center box1  
+
+let pict = make tree
+render "Canvas" 600 400 pict
