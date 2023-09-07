@@ -1,0 +1,10 @@
+#r "nuget:DIKU.Canvas, 2.0"
+open Canvas
+open Color
+
+let circle= ellipse red 20.0 100.0 100.0
+let tree = translate 200.0 200.0 circle
+
+
+let pict = make circle
+render "Canvas" 400 400 pict
