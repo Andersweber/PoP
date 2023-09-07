@@ -1,1 +1,17 @@
+let rec readNonZeroValue () = 
+    printfn "Please enter a programming language or type quit to stop" // hvad den skal sige
+    let a = System.Console.ReadLine ()
 
+    match a with
+    |  "quit" ->
+        printfn "stopped" //her skriver den stopped efter indtastet quit
+    | "fsharp" ->
+        printfn "fsharp is cool!"  // her skriver den fsharp is cool! når der er skrevet fsharp 
+        readNonZeroValue ()
+    | _ ->
+        printfn "Error: I don't know this language. Try again" // her skriver den Error ... . hvis andet end quit og fsharp er skrevet
+        readNonZeroValue ()
+        
+
+
+readNonZeroValue ()
